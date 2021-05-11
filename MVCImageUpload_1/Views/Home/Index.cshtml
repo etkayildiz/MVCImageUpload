@@ -1,0 +1,26 @@
+﻿@model TestVM
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+@using (Html.BeginForm("Index","Home",FormMethod.Post,new {enctype="multipart/form-data" }))
+{
+    <div>
+        İsim Giriniz
+    </div>
+    <div>
+        @Html.TextBoxFor(x=>x.TestClass.Name)
+    </div>
+    <div>
+        <input type="file" name="resim" value="" />
+    </div>
+    <div>
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+
+
+}
